@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context="fragmentdemo.androidacademia.com.hellowearable.ShowTimerActivity"
+    tools:deviceIds="wear">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/inner_frame_layout_padding"
+        app:boxedEdges="all">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click for confirmation"
+            android:onClick="showConfirmation"
+            />
+
+        <android.support.wear.widget.CircularProgressLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:id="@+id/circularProgressLayout"
+            app:backgroundColor="@color/blue"
+            app:colorSchemeColors="@color/light_grey"
+            app:strokeWidth="4dp"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_full_cancel"
+
+                />
+        </android.support.wear.widget.CircularProgressLayout>
+
+
+
+    </LinearLayout>
+</android.support.wear.widget.BoxInsetLayout>
+
